@@ -49,7 +49,7 @@ class Discover extends Component {
        });
        
        const image = userimages[Math.floor(Math.random()* userimages.length)];
-       console.log(image)
+       
        
         this.setState({image:image})
         
@@ -71,6 +71,7 @@ class Discover extends Component {
         <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
           Yay! That Pup Liked You Too!!!
         </Alert>
+        
       </div>
     );
   }

@@ -16,7 +16,15 @@ class Search extends Component {
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
     API.getBaseBreedsList()
-      .then(res => this.setState({ breeds: res.data.message }))
+      .then(res => {
+        let users = res.data
+       const usernames = []
+       const names = users.forEach(user => {
+         usernames.push(user.login)
+       });
+       console.log(usernames)
+        this.setState({breeds:usernames})
+      })
       .catch(err => console.log(err));
   }
 

@@ -7,9 +7,9 @@ export default {
     return axios.get(URL);
   },
   getDogsOfBreed: function(breed) {
-    return axios.get(URL+"/" + breed);
+    return axios.get(URL+"/" + breed );
   },
   getBaseBreedsList: function() {
-    return axios.get("https://dog.ceo/api/breeds/list");
+    return axios.get("https://api.github.com/users?since=135");
   }
 };
