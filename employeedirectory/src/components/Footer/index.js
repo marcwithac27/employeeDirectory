@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>gitster 2017</span>
+      <span>Pupster 2017</span>
     </footer>
   );
 }

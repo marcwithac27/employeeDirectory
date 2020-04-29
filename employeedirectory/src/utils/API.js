@@ -1,15 +1,15 @@
 import axios from "axios";
-
-// Export an object containing methods we'll use for accessing the Git.Ceo API
+const URL = "https://api.github.com/users"
+// Export an object containing methods we'll use for accessing the Dog.Ceo API
 
 export default {
-  getRandomGit: function() {
-    return axios.get("https://api.github.com/users?since=135");
+  getRandomDog: function() {
+    return axios.get(URL);
   },
-  getGitsOfDeveloper: function(developer) {
-    return axios.get("https://api.github.com/users/" + developer );
+  getDogsOfBreed: function(breed) {
+    return axios.get(URL+"/" + breed);
   },
-  getBaseDevelopersList: function() {
-    return axios.get("https://git.ceo/api/developers/list");
+  getBaseBreedsList: function() {
+    return axios.get("https://dog.ceo/api/breeds/list");
   }
 };

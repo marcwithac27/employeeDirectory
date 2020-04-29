@@ -4,10 +4,7 @@ import "./style.css";
 function SearchResults(props) {
   return (
     <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result} className="list-group-item"> />
-        </li>
-      ))}
+      <img alt="Dog" src={props.results} className="img-fluid" />
     </ul>
   );
 }

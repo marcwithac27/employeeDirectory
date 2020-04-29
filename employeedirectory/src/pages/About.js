@@ -8,13 +8,13 @@ function About() {
   return (
     <div>
       <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>gitster</h1>
+        <h1>Pupster</h1>
         <h2>They're the Good Boys and Girls</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To gitster!</h1>
+            <h1>Welcome To Pupster!</h1>
           </Col>
         </Row>
         <Row>
@@ -62,3 +62,7 @@ function About() {
 }
 
 export default About;
+
+
+
+
