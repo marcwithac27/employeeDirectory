@@ -1,16 +1,16 @@
 import React from "react";
-import tableRow from "../tableRow";
+import TableRow from "../tableRow/tableRow";
 
 const tableBody = (props) => {
     return (
     <tbody>
         {
             props.empListFilter.map(employee => (
-                <tableRow
+                <TableRow
                 key={employee.id}
                 id={employee.id}
                 photo={employee.photo}
-                email={employee.email}
+                name={employee.name}
                 />
             ))
         }

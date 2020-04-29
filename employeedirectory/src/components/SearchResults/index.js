@@ -4,7 +4,7 @@ import "./style.css";
 function SearchResults(props) {
   return (
     <ul className="list-group search-results">
-      <img alt="Dog" src={props.results} className="img-fluid" />
+      <img alt="Losers will Dislay here on this broken Image" src={props.results} className="img-fluid" />
     </ul>
   );
 }

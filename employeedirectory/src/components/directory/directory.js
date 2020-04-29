@@ -3,8 +3,8 @@ import "./directory.css";
 import { Table } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import SearchForm from "../SearchForm";
-import TableBody from "../tableBody";
-import TableHead from "../tableHead";
+import TableBody from "../tableBody/tableBody";
+import TableHead from "../tableHead/tableHead";
 import API from "../../utils/API";
 
 class Directory extends React.Component {
@@ -23,7 +23,7 @@ class Directory extends React.Component {
         API.getBaseBreedsList()
         .then(res => {
             const empList = this.createEmpList(res.data);
-            console.log(empList)
+            
             this.setState({employees: empList});
             this.setState({empListFilter: empList});
         })
@@ -38,7 +38,7 @@ class Directory extends React.Component {
                 name: emp.login,
                 photo: emp.avatar_url,
             }
-            console.log(empData)
+            
             return empData;
         });
     }
@@ -89,9 +89,6 @@ class Directory extends React.Component {
         return (
             <div>
                 <Container>
-                    <SearchForm
-                        handleInput={this.handleInput}
-                    />
                     <TableHead
                     headId = "ID"
                     handleSortId = {this.handleSortId}
